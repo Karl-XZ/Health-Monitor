@@ -93,4 +93,4 @@ Key external documentation / references for concepts and APIs:
 - ML Kit terms (for the face-detection SDK): https://developers.google.com/ml-kit/terms
 - PPG (photoplethysmography) background: https://en.wikipedia.org/wiki/Photoplethysmogram
 - HRV standards (SDNN/RMSSD and interpretation): https://www.ahajournals.org/doi/10.1161/01.cir.93.5.1043
-- (Optional) SQLCipher with Room reference: https://github.com/sqlcipher/android-database-sqlcipher
+

@@ -81,8 +81,16 @@ This app provides health information and screening hints only. It is not a medic
 **Implementation Docs**
 - `HEART_RATE_DETECTION_IMPL.md`
 
-**Third-party libraries and tools** 
-- This project builds on widely used Android and open-source components, including AndroidX Jetpack libraries (Compose, Navigation, Room), CameraX for camera capture, Google ML Kit for on-device face detection, and SQLCipher for encrypted local storage, as well as Android Keystore for key management and PBKDF2 for password hashing. The complete dependency list (and corresponding licenses) can be found in the Gradle configuration and will be provided in the repository.
+## Third-party libraries & references
 
-**References**
-- Heart rate is estimated from a camera-based photoplethysmography (PPG) signal, where subtle intensity/color changes correlate with blood volume pulse. HRV metrics (e.g., SDNN and RMSSD) are computed from inter-beat intervals. Any external articles or research references used for these concepts will be listed here with links.
+This project does not use any external training dataset. All measurements are derived from on-device camera frames and local signal/statistical processing.
+
+Third-party libraries and tools used in this project (declared in `app/build.gradle.kts`) include Kotlin/AndroidX Jetpack components (Compose, Navigation, Lifecycle, Activity), CameraX for camera frame capture, ML Kit Face Detection for on-device face detection, Hilt for dependency injection, Room for local persistence, SQLCipher for encrypted local database storage, OkHttp for optional networking, Kotlin Coroutines for async processing, MPAndroidChart for charts, Coil for image loading, Gson for JSON serialization, AndroidX Biometric for optional biometric unlock, and AndroidX DataStore for preferences.
+
+Key external documentation / references for concepts and APIs:
+- CameraX documentation: https://developer.android.com/media/camera/camerax
+- ML Kit Face Detection documentation: https://developers.google.com/ml-kit/vision/face-detection/android
+- ML Kit terms (for the face-detection SDK): https://developers.google.com/ml-kit/terms
+- PPG (photoplethysmography) background: https://en.wikipedia.org/wiki/Photoplethysmogram
+- HRV standards (SDNN/RMSSD and interpretation): https://www.ahajournals.org/doi/10.1161/01.cir.93.5.1043
+- (Optional) SQLCipher with Room reference: https://github.com/sqlcipher/android-database-sqlcipher

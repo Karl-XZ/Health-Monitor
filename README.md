@@ -81,4 +81,8 @@ This app provides health information and screening hints only. It is not a medic
 **Implementation Docs**
 - `HEART_RATE_DETECTION_IMPL.md`
 
-This project does not use any external training dataset. All measurements are derived from camera frames captured on-device and processed locally.
+**Third-party libraries and tools** 
+- This project builds on widely used Android and open-source components, including AndroidX Jetpack libraries (Compose, Navigation, Room), CameraX for camera capture, Google ML Kit for on-device face detection, and SQLCipher for encrypted local storage, as well as Android Keystore for key management and PBKDF2 for password hashing. The complete dependency list (and corresponding licenses) can be found in the Gradle configuration and will be provided in the repository.
+
+**References**
+- Heart rate is estimated from a camera-based photoplethysmography (PPG) signal, where subtle intensity/color changes correlate with blood volume pulse. HRV metrics (e.g., SDNN and RMSSD) are computed from inter-beat intervals. Any external articles or research references used for these concepts will be listed here with links.
